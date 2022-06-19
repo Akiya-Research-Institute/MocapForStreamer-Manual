@@ -1,6 +1,6 @@
 # MocapForStreamerって何？
 
-![](images/capsule.png){ loading=lazy }
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PeQOcDB1x8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 二つのウェブカメラをステレオカメラとして用いて、上半身の簡易なモーションキャプチャを行うWindowsアプリケーションです。
 
