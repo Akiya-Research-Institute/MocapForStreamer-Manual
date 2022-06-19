@@ -20,7 +20,7 @@
     
     
       
-        <title>VRMモデルの読み込み - MocapForStreamer Manual</title>
+        <title>Load VRM model - MocapForStreamer Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vrm" class="md-skip">
+        <a href="#load-vrm-model" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VRMモデルの読み込み
+              Load VRM model
             
           </span>
         </div>
@@ -318,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../system-requirement/" class="md-nav__link">
-        動作環境
+        System requrirements
       </a>
     </li>
   
@@ -332,7 +332,7 @@
   
     <li class="md-nav__item">
       <a href="../install/" class="md-nav__link">
-        インストール手順
+        How to install
       </a>
     </li>
   
@@ -384,7 +384,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-webcam-settings/" class="md-nav__link">
-        ウェブカメラの設定
+        Webcam settings
       </a>
     </li>
   
@@ -407,12 +407,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          VRMモデルの読み込み
+          Load VRM model
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        VRMモデルの読み込み
+        Load VRM model
       </a>
       
         
@@ -432,22 +432,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ファイルの読み込み
+  <a href="#load-file" class="md-nav__link">
+    Load file
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    目のボーンの設定
+  <a href="#settings-for-eye-bones" class="md-nav__link">
+    Settings for eye bones
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#morph-target-blend-shape" class="md-nav__link">
-    顔のMorph target (Blend shape)の設定
+  <a href="#settings-for-facial-morph-targets-blend-shapes" class="md-nav__link">
+    Settings for facial morph targets (blend shapes)
   </a>
   
 </li>
@@ -468,7 +468,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-mouse-keyboard/" class="md-nav__link">
-        マウスとキーボードでの操作
+        Mouse and keyboard operation
       </a>
     </li>
   
@@ -482,7 +482,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-export/" class="md-nav__link">
-        出力設定
+        Export settings
       </a>
     </li>
   
@@ -532,7 +532,7 @@
   
     <li class="md-nav__item">
       <a href="../advanced-filter-settings/" class="md-nav__link">
-        スムージングフィルタの設定
+        Smoothing filter settings
       </a>
     </li>
   
@@ -546,7 +546,7 @@
   
     <li class="md-nav__item">
       <a href="../advanced-rig-settings/" class="md-nav__link">
-        動きの設定
+        Rig settings
       </a>
     </li>
   
@@ -568,7 +568,7 @@
   
     <li class="md-nav__item">
       <a href="../known-issue/" class="md-nav__link">
-        既知の障害
+        Known issue
       </a>
     </li>
   
@@ -583,7 +583,7 @@
   
     <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
-        変更履歴
+        Changelog
       </a>
     </li>
   
@@ -602,17 +602,17 @@
               
                 
                 
-                <h1 id="vrm">VRMモデルの読み込み</h1>
-<h2 id="_1">ファイルの読み込み</h2>
-<p>VRMファイルをMocapForStreamerのウィンドウにドラッグ＆ドロップすることで、モデルを読み込むことができます。</p>
-<h2 id="_2">目のボーンの設定</h2>
-<p>モデルによって目のボーンの名前が異なります。自動でボーンを検出できなかった場合は、瞳が動きません。<br />
-その際は、画面左の「Facial expression settings」を開き、「Eye bone override」の下で目のボーンの名前を手動で指定してください。<br />
-また、瞳の動きの範囲が適切でない場合は、「Max angle」を調整してください。</p>
-<h2 id="morph-target-blend-shape">顔のMorph target (Blend shape)の設定</h2>
-<p>モデルによってMorph Targetの名前が異なります。デフォルトでは、<a href="https://hinzka.hatenablog.com/entry/2020/08/15/145040">パーフェクトシンク</a>で使われる名前のMorph Targetがある前提としています。<br />
-モデルがそれ以外の名前でMorph Targetを持っている場合は、画面左の「Facial expression settings」を開き、適切なMorph Target名を手動で入力してください。<br />
-なお、VRoid Studioで作成したモデルに対してMorph Targetを適当に設定した状態のプリセットがあります。「Load preset...」から、VRoidのβ版または最新版のプリセットを読み込んでください。</p>
+                <h1 id="load-vrm-model">Load VRM model</h1>
+<h2 id="load-file">Load file</h2>
+<p>Drag and drop the .vrm file to MocapForStreamer window to load the file.</p>
+<h2 id="settings-for-eye-bones">Settings for eye bones</h2>
+<p>The names of the eye bones vary from model to model. If the bone cannot be detected automatically, the eyes will not move.<br />
+In this case, open the 'Facial expression settings' on the left-hand side of the screen and manually specify the names of the eye bones under 'Eye bone override'.<br />
+Also, if the pupil movement range is not appropriate, adjust the 'Max angle'.</p>
+<h2 id="settings-for-facial-morph-targets-blend-shapes">Settings for facial morph targets (blend shapes)</h2>
+<p>Different models have different names for Morph Targets. By default, it is assumed that the model has morph targets with the names used by <a href="https://hinzka.hatenablog.com/entry/2020/08/15/145040">Perfect Sync</a>.<br />
+If the model has morph targets with other names, open 'Facial expression settings' on the left-hand side of the screen and enter the appropriate morph target names manually.<br />
+Note that there are presets of morph target names for models created by VRoid Studio. Open 'Load preset...' pull down box to load a preset for the beta or latest version of VRoid model.</p>
                 
               
               
@@ -632,7 +632,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../how-to-use-webcam-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ウェブカメラの設定" rel="prev">
+        <a href="../how-to-use-webcam-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Webcam settings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -641,20 +641,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              ウェブカメラの設定
+              Webcam settings
             </div>
           </div>
         </a>
       
       
         
-        <a href="../how-to-use-mouse-keyboard/" class="md-footer__link md-footer__link--next" aria-label="Next: マウスとキーボードでの操作" rel="next">
+        <a href="../how-to-use-mouse-keyboard/" class="md-footer__link md-footer__link--next" aria-label="Next: Mouse and keyboard operation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              マウスとキーボードでの操作
+              Mouse and keyboard operation
             </div>
           </div>
           <div class="md-footer__button md-icon">

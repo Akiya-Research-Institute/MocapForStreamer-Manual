@@ -12,3 +12,5 @@
 - WASD: 前後左右の移動
 - QE: 上下の移動
 - R: 視点のリセット
+
+![](images/keyboard.png){ loading=lazy }

@@ -1,3 +1,3 @@
-# スムージングフィルタの設定
+# Smoothing filter settings
 
-（工事中）
+(WIP)

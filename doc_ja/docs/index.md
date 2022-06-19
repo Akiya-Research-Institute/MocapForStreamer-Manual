@@ -1,5 +1,7 @@
 # MocapForStreamerって何？
 
+![](images/capsule.png){ loading=lazy }
+
 二つのウェブカメラをステレオカメラとして用いて、上半身の簡易なモーションキャプチャを行うWindowsアプリケーションです。
 
 ## 特徴

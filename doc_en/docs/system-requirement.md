@@ -1,8 +1,8 @@
-# 動作環境
+# System requrirements
 
-同一機種のウェブカメラが2つ必要であることに注意してください。
+Note that two webcams MUST be the same model.
 
-## 最低動作環境
+## Minimum
 
 - OS: Windows 10 64bit
 - CPU: 1.1GHz quad-core processor
@@ -10,7 +10,7 @@
 - Storage: 0.5GB free space
 - Camera: 2 webcams of the same model
 
-## 推奨動作環境
+## Recommended
 
 - OS: Windows 10 64bit
 - CPU: 4.5GHz quad-core processor

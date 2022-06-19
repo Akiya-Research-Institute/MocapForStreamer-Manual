@@ -1,7 +1,7 @@
-# 既知の障害
+# Known issue
 
-## 一部の機種のカメラに接続できない
-必ずしも全ての機種のウェブカメラをサポートしているわけではありません。
+## Unable to connect to some models of cameras
+Not all models of webcams are necessarily supported.
 
-## 起動時に前回のカメラが正常に読み込まれない
-ウェブカメラの起動を正しく待つことができない場合があります。その場合は、手動でカメラを再指定してください。
+## Previous cameras are not loaded correctly on start-up
+Sometimes it fails to wait for the webcam start-up correctly. If this is the case, please reopen the camera manually.

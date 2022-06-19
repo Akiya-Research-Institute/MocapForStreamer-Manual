@@ -20,7 +20,7 @@
     
     
       
-        <title>ウェブカメラの設定 - MocapForStreamer Manual</title>
+        <title>Webcam settings - MocapForStreamer Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#webcam-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ウェブカメラの設定
+              Webcam settings
             
           </span>
         </div>
@@ -318,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../system-requirement/" class="md-nav__link">
-        動作環境
+        System requrirements
       </a>
     </li>
   
@@ -332,7 +332,7 @@
   
     <li class="md-nav__item">
       <a href="../install/" class="md-nav__link">
-        インストール手順
+        How to install
       </a>
     </li>
   
@@ -393,12 +393,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ウェブカメラの設定
+          Webcam settings
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ウェブカメラの設定
+        Webcam settings
       </a>
       
         
@@ -418,15 +418,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    どんなウェブカメラがいいの？
+  <a href="#what-kind-of-camera-should-i-use" class="md-nav__link">
+    What kind of camera should I use?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    カメラ配置
+  <a href="#camera-placement" class="md-nav__link">
+    Camera placement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-calibration" class="md-nav__link">
+    Camera calibration
   </a>
   
 </li>
@@ -447,7 +454,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-vrm-model/" class="md-nav__link">
-        VRMモデルの読み込み
+        Load VRM model
       </a>
     </li>
   
@@ -461,7 +468,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-mouse-keyboard/" class="md-nav__link">
-        マウスとキーボードでの操作
+        Mouse and keyboard operation
       </a>
     </li>
   
@@ -475,7 +482,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-export/" class="md-nav__link">
-        出力設定
+        Export settings
       </a>
     </li>
   
@@ -525,7 +532,7 @@
   
     <li class="md-nav__item">
       <a href="../advanced-filter-settings/" class="md-nav__link">
-        スムージングフィルタの設定
+        Smoothing filter settings
       </a>
     </li>
   
@@ -539,7 +546,7 @@
   
     <li class="md-nav__item">
       <a href="../advanced-rig-settings/" class="md-nav__link">
-        動きの設定
+        Rig settings
       </a>
     </li>
   
@@ -561,7 +568,7 @@
   
     <li class="md-nav__item">
       <a href="../known-issue/" class="md-nav__link">
-        既知の障害
+        Known issue
       </a>
     </li>
   
@@ -576,7 +583,7 @@
   
     <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
-        変更履歴
+        Changelog
       </a>
     </li>
   
@@ -595,24 +602,33 @@
               
                 
                 
-                <h1 id="_1">ウェブカメラの設定</h1>
-<h2 id="_2">どんなウェブカメラがいいの？</h2>
-<p>MocapForStreamerの開発で使用したカメラは下記のものです。</p>
-<ul>
-<li>
+                <h1 id="webcam-settings">Webcam settings</h1>
+<h2 id="what-kind-of-camera-should-i-use">What kind of camera should I use?</h2>
+<p>The following camera was used in the development of MocapForStreamer. (FOV is around 90 degree.)</p>
 <p><a href="https://www.amazon.co.jp/Web%E3%82%AB%E3%83%A1%E3%83%A9-Youlisn%E3%83%95%E3%83%ABHD-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9-zoom%E5%AF%BE%E5%BF%9C-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC/dp/B08CBV2PK9">Amazon.co.jp: Webカメラ 1080P, YoulisnフルHD 広角 30fps</a></p>
-</li>
-<li>
-<p><strong>視野角</strong>は広い方がモーションキャプチャできる空間を広く確保できます。しかし、MocapForStreamerではシンプルなピンホールカメラモデルで三次元位置を計算しているため、魚眼レンズのように画像に歪みが生じると動きを正しくキャプチャできません。歪みが少なく、視野角の大きいカメラが最も適しているといえます。</p>
-</li>
-<li><strong>フレームレート</strong>が低い場合、その値がキャプチャ結果のフレームレートのボトルネックとなり得ます。使用するPCの性能を勘案した上で、ご自身が目標とされるキャプチャ結果のフレームレート以上のカメラをご用意ください。なお、MocapForStreamer自体の処理能力は、例えばRTX3070では60fps程度が目安です。  </li>
-<li><strong>画像サイズ</strong>は、HD～FHDが推奨です。</li>
-</ul>
-<h2 id="_3">カメラ配置</h2>
 <ul>
-<li>2つのカメラをPCのディスプレイの上などに並べ、2つのカメラの光軸が平行になるように配置してください。</li>
-<li>2つのカメラは、20～30cm程度の間隔をあけて配置してください。</li>
+<li>The wider the <strong>FOV</strong>, the wider the space for motion capture. However, MocapForStreamer calculates the 3D position with a simple pinhole camera model, so if the image is distorted like a fisheye lens, the movement cannot be captured correctly. A camera with low distortion and a wide FOV is most suitable.</li>
+<li>If the <strong>frame rate</strong> is low, that value can be a bottleneck in the frame rate of the capture. Considering the performance of your PC, get cameras with a higher frame rate than that of your desired capture result. The performance of MocapForStreamer itself is, using RTX3070 for example, about 60fps.  </li>
+<li>HD to FHD <strong>Image size</strong> is recommended. </li>
 </ul>
+<h2 id="camera-placement">Camera placement</h2>
+<ul>
+<li>Place the two cameras side by side, e.g. on a PC display, so that the optical axes of the two cameras are parallel.</li>
+<li>The two cameras should be placed 20-30 cm apart.</li>
+</ul>
+<h2 id="camera-calibration">Camera calibration</h2>
+<ul>
+<li>Place your face in the center of the field of view of both cameras and press "Calibrate" while looking straight at the camera.</li>
+<li>Place your face in the center of the field of view of both cameras and press "Calibrate" while looking at a 45 degree angle to the camera.</li>
+</ul>
+<p><img alt="" loading="lazy" src="../images/camera-calibration.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">To input the values manually</p>
+<ul>
+<li>Camera Distance: Measure the distance of two cameras.</li>
+<li>Focal length: Measure the distance in pixels between the center of the image and a point 45 degree away from the camera's optical axis.</li>
+</ul>
+</div>
                 
               
               
@@ -632,7 +648,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: インストール手順" rel="prev">
+        <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to install" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -641,20 +657,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              インストール手順
+              How to install
             </div>
           </div>
         </a>
       
       
         
-        <a href="../how-to-use-vrm-model/" class="md-footer__link md-footer__link--next" aria-label="Next: VRMモデルの読み込み" rel="next">
+        <a href="../how-to-use-vrm-model/" class="md-footer__link md-footer__link--next" aria-label="Next: Load VRM model" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              VRMモデルの読み込み
+              Load VRM model
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -1,5 +1,7 @@
 # What is MocapForStreamer?
 
+![](images/capsule.png){ loading=lazy }
+
 A Windows application for upper body motion capture using two webcams as stereo cameras.
 
 ## Features

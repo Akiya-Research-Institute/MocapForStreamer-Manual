@@ -1,9 +1,9 @@
-# 出力設定
+# Export settings
 
-## 背景色の変更
+## Background color
 
-クロマキー合成等のために背景色を変更するには、画面左の「Environment settings」メニューから「Background color」を変更してください。
+To change the background color for chroma key compositing etc., change the 'Background color' from the 'Environment settings' menu on the left of the screen.
 
-## VMCプロトコルの出力
+## Export VMC protocol
 
-画面左の「Export settings」メニューから「Send VMC protocol」を有効化してください。
+Activate the 'Send VMC protocol' in the 'Export settings' menu on the left-hand side of the screen.

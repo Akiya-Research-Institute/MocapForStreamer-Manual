@@ -1,14 +1,16 @@
-# マウスとキーボードでの操作
+# Mouse and keyboard operation
 
-## マウス操作
+## Mouse operation
 
-- 左クリックしてドラッグ: 前後の移動 + 左右の回転
-- 中クリックしてドラッグ: 上下左右の移動
-- 右クリックしてドラッグ: 上下左右の回転
+- Left click + drag: Move forward/backword & look left/right
+- Middle click + drag: Move up/down & move left/right
+- Right click + drag: Look up/down & look left/right
 
-## キーボード操作
+## keyboard operation
 
-- 上下左右の矢印: 上下左右の回転
-- WASD: 前後左右の移動
-- QE: 上下の移動
-- R: 視点のリセット
+- Arrows: Look up/down & look left/right
+- WASD: Move forward/backword & move left/right
+- QE: Move up/down
+- R: Reset the view
+
+![](images/keyboard.png){ loading=lazy }

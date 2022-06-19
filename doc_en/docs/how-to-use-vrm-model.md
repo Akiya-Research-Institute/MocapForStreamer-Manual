@@ -1,17 +1,17 @@
-# VRMモデルの読み込み
+# Load VRM model
 
-## ファイルの読み込み
+## Load file
 
-VRMファイルをMocapForStreamerのウィンドウにドラッグ＆ドロップすることで、モデルを読み込むことができます。
+Drag and drop the .vrm file to MocapForStreamer window to load the file.
 
-## 目のボーンの設定
+## Settings for eye bones
 
-モデルによって目のボーンの名前が異なります。自動でボーンを検出できなかった場合は、瞳が動きません。  
-その際は、画面左の「Facial expression settings」を開き、「Eye bone override」の下で目のボーンの名前を手動で指定してください。  
-また、瞳の動きの範囲が適切でない場合は、「Max angle」を調整してください。
+The names of the eye bones vary from model to model. If the bone cannot be detected automatically, the eyes will not move.  
+In this case, open the 'Facial expression settings' on the left-hand side of the screen and manually specify the names of the eye bones under 'Eye bone override'.  
+Also, if the pupil movement range is not appropriate, adjust the 'Max angle'.
 
-## 顔のMorph target (Blend shape)の設定
+## Settings for facial morph targets (blend shapes)
 
-モデルによってMorph Targetの名前が異なります。デフォルトでは、[パーフェクトシンク](https://hinzka.hatenablog.com/entry/2020/08/15/145040)で使われる名前のMorph Targetがある前提としています。  
-モデルがそれ以外の名前でMorph Targetを持っている場合は、画面左の「Facial expression settings」を開き、適切なMorph Target名を手動で入力してください。  
-なお、VRoid Studioで作成したモデルに対してMorph Targetを適当に設定した状態のプリセットがあります。「Load preset...」から、VRoidのβ版または最新版のプリセットを読み込んでください。
+Different models have different names for Morph Targets. By default, it is assumed that the model has morph targets with the names used by [Perfect Sync](https://hinzka.hatenablog.com/entry/2020/08/15/145040).  
+If the model has morph targets with other names, open 'Facial expression settings' on the left-hand side of the screen and enter the appropriate morph target names manually.  
+Note that there are presets of morph target names for models created by VRoid Studio. Open 'Load preset...' pull down box to load a preset for the beta or latest version of VRoid model.

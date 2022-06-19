@@ -1,3 +1,3 @@
-# 動きの設定
+# Rig settings
 
-（工事中）
+(WIP)

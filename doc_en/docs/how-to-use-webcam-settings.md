@@ -1,17 +1,28 @@
-# ウェブカメラの設定
+# Webcam settings
 
-## どんなウェブカメラがいいの？
+## What kind of camera should I use?
 
-MocapForStreamerの開発で使用したカメラは下記のものです。
+The following camera was used in the development of MocapForStreamer. (FOV is around 90 degree.)
 
-- [Amazon.co.jp: Webカメラ 1080P, YoulisnフルHD 広角 30fps](https://www.amazon.co.jp/Web%E3%82%AB%E3%83%A1%E3%83%A9-Youlisn%E3%83%95%E3%83%ABHD-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9-zoom%E5%AF%BE%E5%BF%9C-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC/dp/B08CBV2PK9)
+[Amazon.co.jp: Webカメラ 1080P, YoulisnフルHD 広角 30fps](https://www.amazon.co.jp/Web%E3%82%AB%E3%83%A1%E3%83%A9-Youlisn%E3%83%95%E3%83%ABHD-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9-zoom%E5%AF%BE%E5%BF%9C-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC/dp/B08CBV2PK9)
+    
 
-- **視野角**は広い方がモーションキャプチャできる空間を広く確保できます。しかし、MocapForStreamerではシンプルなピンホールカメラモデルで三次元位置を計算しているため、魚眼レンズのように画像に歪みが生じると動きを正しくキャプチャできません。歪みが少なく、視野角の大きいカメラが最も適しているといえます。
-- **フレームレート**が低い場合、その値がキャプチャ結果のフレームレートのボトルネックとなり得ます。使用するPCの性能を勘案した上で、ご自身が目標とされるキャプチャ結果のフレームレート以上のカメラをご用意ください。なお、MocapForStreamer自体の処理能力は、例えばRTX3070では60fps程度が目安です。  
-- **画像サイズ**は、HD～FHDが推奨です。
+- The wider the **FOV**, the wider the space for motion capture. However, MocapForStreamer calculates the 3D position with a simple pinhole camera model, so if the image is distorted like a fisheye lens, the movement cannot be captured correctly. A camera with low distortion and a wide FOV is most suitable.
+- If the **frame rate** is low, that value can be a bottleneck in the frame rate of the capture. Considering the performance of your PC, get cameras with a higher frame rate than that of your desired capture result. The performance of MocapForStreamer itself is, using RTX3070 for example, about 60fps.  
+- HD to FHD **Image size** is recommended. 
 
-## カメラ配置
+## Camera placement
 
-- 2つのカメラをPCのディスプレイの上などに並べ、2つのカメラの光軸が平行になるように配置してください。
-- 2つのカメラは、20～30cm程度の間隔をあけて配置してください。
+- Place the two cameras side by side, e.g. on a PC display, so that the optical axes of the two cameras are parallel.
+- The two cameras should be placed 20-30 cm apart.
 
+## Camera calibration
+
+- Place your face in the center of the field of view of both cameras and press "Calibrate" while looking straight at the camera.
+- Place your face in the center of the field of view of both cameras and press "Calibrate" while looking at a 45 degree angle to the camera.
+
+![](images/camera-calibration.gif){ loading=lazy }
+
+!!! Tip "To input the values manually"
+    - Camera Distance: Measure the distance of two cameras.
+    - Focal length: Measure the distance in pixels between the center of the image and a point 45 degree away from the camera's optical axis.
