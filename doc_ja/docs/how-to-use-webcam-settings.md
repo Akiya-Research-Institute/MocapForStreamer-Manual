@@ -25,7 +25,7 @@ MocapForStreamerの開発では下記のカメラを使用しました。（視�
 ## カメラ校正
 
 - カメラの視野の中央付近に顔が映るようにします。
-- カメラをまっすぎ見た状態で、「Camera Distance」の「Calibrate」をクリックします。
+- カメラをまっすぐ見た状態で、「Camera Distance」の「Calibrate」をクリックします。
 - カメラに対して斜め45度を向いた状態で、「Focal length」の「Calibrate」をクリックします。
 
 ![](images/camera-calibration.gif){ loading=lazy }
