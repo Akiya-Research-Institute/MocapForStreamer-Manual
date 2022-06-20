@@ -432,6 +432,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#open-camera" class="md-nav__link">
+    Open camera
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-calibration" class="md-nav__link">
     Camera calibration
   </a>
@@ -615,6 +622,12 @@
 <ul>
 <li>Place the two cameras side by side, e.g. on a PC display, so that the optical axes of the two cameras are parallel.</li>
 <li>The two cameras should be placed 20-30 cm apart.</li>
+</ul>
+<p><img alt="" loading="lazy" src="../images/camera-placement.png" /></p>
+<h2 id="open-camera">Open camera</h2>
+<ul>
+<li>In the 'Webcam settings' section of MocapForStreamer, specify the camera on the left side <strong>as seen from the user</strong> as the 'Left camera' and the camera on the right side as the 'Right camera'.</li>
+<li>By default, the camera is controlled using the 'Windows Media Framework', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.</li>
 </ul>
 <h2 id="camera-calibration">Camera calibration</h2>
 <ul>

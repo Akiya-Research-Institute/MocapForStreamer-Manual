@@ -16,6 +16,13 @@ The following camera was used in the development of MocapForStreamer. (FOV is ar
 - Place the two cameras side by side, e.g. on a PC display, so that the optical axes of the two cameras are parallel.
 - The two cameras should be placed 20-30 cm apart.
 
+![](images/camera-placement.png){ loading=lazy }
+
+## Open camera 
+
+- In the 'Webcam settings' section of MocapForStreamer, specify the camera on the left side **as seen from the user** as the 'Left camera' and the camera on the right side as the 'Right camera'.
+- By default, the camera is controlled using the 'Windows Media Framework', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.
+
 ## Camera calibration
 
 - Place your face in the center of the field of view of both cameras and press "Calibrate" while looking straight at the camera.

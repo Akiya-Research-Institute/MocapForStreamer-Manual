@@ -17,6 +17,11 @@ MocapForStreamerの開発では下記のカメラを使用しました。（視�
 
 ![](images/camera-placement.png){ loading=lazy }
 
+## カメラの起動
+
+- MocapForStreamerの「Webcam settings」で、**ユーザから見て**左側にあるカメラを「Left camera」、右側にあるカメラを「Right camera」として指定します。
+- デフォルトでは、「Windows Media Framework」を使ってカメラを制御していますが、一部のカメラは動作しません。カメラが正しく起動しない場合は、「Webcam framework」で「DirectShow」を指定し、カメラを開きなおしてください。
+
 ## カメラ校正
 
 - カメラの視野の中央付近に顔が映るようにします。
