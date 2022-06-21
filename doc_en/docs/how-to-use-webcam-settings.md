@@ -21,7 +21,11 @@ The following camera was used in the development of MocapForStreamer. (FOV is ar
 ## Open camera 
 
 - In the 'Webcam settings' section of MocapForStreamer, specify the camera on the left side **as seen from the user** as the 'Left camera' and the camera on the right side as the 'Right camera'.
-- By default, the camera is controlled using the 'Windows Media Framework', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.
+- By default, the camera is controlled using the 'Windows Media Foundation', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.
+
+!!! Warning "May not work with USB hub"
+    If you connect two webcams to one USB hub, you may not be able to open the camera properly.  
+    If this is the case, try connecting directly to a USB port on your PC without using a USB hub.
 
 ## Camera calibration
 

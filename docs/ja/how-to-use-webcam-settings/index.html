@@ -627,8 +627,13 @@
 <h2 id="_4">カメラの起動</h2>
 <ul>
 <li>MocapForStreamerの「Webcam settings」で、<strong>ユーザから見て</strong>左側にあるカメラを「Left camera」、右側にあるカメラを「Right camera」として指定します。</li>
-<li>デフォルトでは、「Windows Media Framework」を使ってカメラを制御していますが、一部のカメラは動作しません。カメラが正しく起動しない場合は、「Webcam framework」で「DirectShow」を指定し、カメラを開きなおしてください。</li>
+<li>デフォルトでは、「Windows Media Foundation」を使ってカメラを制御していますが、一部のカメラは動作しません。カメラが正しく起動しない場合は、「Webcam framework」で「DirectShow」を指定し、カメラを開きなおしてください。</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">USBハブを使うと動作しない場合があります</p>
+<p>一つのUSBハブに2個のWebカメラを接続すると、カメラを正常に開くことができない場合があります。<br />
+その場合は、USBハブを使わずに、PCのUSBポートに直接接続してみてください。</p>
+</div>
 <h2 id="_5">カメラ校正</h2>
 <ul>
 <li>カメラの視野の中央付近に顔が映るようにします。</li>

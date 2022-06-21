@@ -627,8 +627,13 @@
 <h2 id="open-camera">Open camera</h2>
 <ul>
 <li>In the 'Webcam settings' section of MocapForStreamer, specify the camera on the left side <strong>as seen from the user</strong> as the 'Left camera' and the camera on the right side as the 'Right camera'.</li>
-<li>By default, the camera is controlled using the 'Windows Media Framework', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.</li>
+<li>By default, the camera is controlled using the 'Windows Media Foundation', but some cameras do not work. If the camera does not start correctly, specify 'DirectShow' in the 'Webcam framework' and reopen the camera.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">May not work with USB hub</p>
+<p>If you connect two webcams to one USB hub, you may not be able to open the camera properly.<br />
+If this is the case, try connecting directly to a USB port on your PC without using a USB hub.</p>
+</div>
 <h2 id="camera-calibration">Camera calibration</h2>
 <ul>
 <li>Place your face in the center of the field of view of both cameras and press "Calibrate" while looking straight at the camera.</li>
