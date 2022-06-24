@@ -99,5 +99,6 @@ nav:
   - 高度な使い方:
     - advanced-filter-settings.md
     - advanced-rig-settings.md
+  - faq.md
   - known-issue.md
   - changelog.md

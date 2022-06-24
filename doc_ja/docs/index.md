@@ -2,14 +2,14 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PeQOcDB1x8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-二つのウェブカメラをステレオカメラとして用いて、上半身の簡易なモーションキャプチャを行うWindowsアプリケーションです。
+同一機種のウェブカメラ２個をステレオカメラとして用いて、上半身の簡易なモーションキャプチャを行うWindowsアプリケーションです。
 
 ## 特徴
 
 下記のものがあれば、特別な装置を必要とすることなく、人の上半身の動きをリアルタイムでをキャプチャすることができます。
 
 - ミドルクラスのPC
-- 2台の同一機種のウェブカメラ
+- 同一機種のウェブカメラ２個
 
 また、キャプチャした動きは、VMCプロトコルで出力することができます。
 

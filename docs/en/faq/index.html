@@ -13,14 +13,14 @@
         <meta name="author" content="Kenji Asaba">
       
       
-        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/MocapForStreamer-Manual/how-to-use-export/">
+        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/MocapForStreamer-Manual/faq/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Export settings - MocapForStreamer Manual</title>
+        <title>FAQ - MocapForStreamer Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#export-settings" class="md-skip">
+        <a href="#faq" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Export settings
+              FAQ
             
           </span>
         </div>
@@ -351,16 +351,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -423,60 +421,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Export settings
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-use-export/" class="md-nav__link">
         Export settings
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#background-color" class="md-nav__link">
-    Background color
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-vmc-protocol" class="md-nav__link">
-    Export VMC protocol
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -558,11 +507,67 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         FAQ
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#captured-motion-is-wrong" class="md-nav__link">
+    Captured motion is wrong
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-app-crashes-on-startup" class="md-nav__link">
+    The app crashes on startup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unable-to-connect-to-camera" class="md-nav__link">
+    Unable to connect to camera
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -610,11 +615,24 @@
               
                 
                 
-                <h1 id="export-settings">Export settings</h1>
-<h2 id="background-color">Background color</h2>
-<p>To change the background color for chroma key compositing etc., change the 'Background color' from the 'Environment settings' menu on the left of the screen.</p>
-<h2 id="export-vmc-protocol">Export VMC protocol</h2>
-<p>Activate the 'Send VMC protocol' in the 'Export settings' menu on the left-hand side of the screen.</p>
+                <h1 id="faq">FAQ</h1>
+<h2 id="captured-motion-is-wrong">Captured motion is wrong</h2>
+<ul>
+<li>Check if the cameras are assigned correctly. ("Left camera" is the camera on the left seen from you.)</li>
+<li>Adjust the camera and sitting position so that the upper body is within the camera's field of view.</li>
+<li>Please check that the room is well-lit.</li>
+</ul>
+<h2 id="the-app-crashes-on-startup">The app crashes on startup</h2>
+<ul>
+<li>Try reseting all the settings by deleting <code>C:\Users\&lt;YUOR_USER_NAME&gt;\AppData\Local\MocapForStreamer</code>.</li>
+<li>If your installation path is long, change it to somewhere like "C:\MocapForStreamer".</li>
+</ul>
+<h2 id="unable-to-connect-to-camera">Unable to connect to camera</h2>
+<ul>
+<li>Selecting 'DirectShow' for 'Webcam framework' in the camera settings may solve the problem.</li>
+<li>If you are using a USB hub, try connecting directly to USB ports on your PC without using a USB hub.</li>
+</ul>
+<p>See <a href="../how-to-use-webcam-settings/#open-camera">Open camera</a> for the details.</p>
                 
               
               
@@ -634,7 +652,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../how-to-use-mouse-keyboard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mouse and keyboard operation" rel="prev">
+        <a href="../advanced-rig-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rig settings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -643,20 +661,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Mouse and keyboard operation
+              Rig settings
             </div>
           </div>
         </a>
       
       
         
-        <a href="../advanced-filter-settings/" class="md-footer__link md-footer__link--next" aria-label="Next: Smoothing filter settings" rel="next">
+        <a href="../known-issue/" class="md-footer__link md-footer__link--next" aria-label="Next: Known issue" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Smoothing filter settings
+              Known issue
             </div>
           </div>
           <div class="md-footer__button md-icon">
