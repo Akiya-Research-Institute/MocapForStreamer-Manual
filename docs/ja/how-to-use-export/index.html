@@ -468,8 +468,35 @@
       
         <li class="md-nav__item">
   <a href="#vmc" class="md-nav__link">
-    VMCプロトコルの出力
+    VMCプロトコル出力
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndi" class="md-nav__link">
+    NDI®による動画ストリーム出力
+  </a>
+  
+    <nav class="md-nav" aria-label="NDI®による動画ストリーム出力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ndi_1" class="md-nav__link">
+    NDI出力でできること
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    背景を透過した画像の出力
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -517,6 +544,48 @@
           高度な使い方
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-environment/" class="md-nav__link">
+        背景の設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-lighting/" class="md-nav__link">
+        ライティングの設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-postprocess/" class="md-nav__link">
+        ポストプロセス効果の設定
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -613,8 +682,38 @@
                 <h1 id="_1">出力設定</h1>
 <h2 id="_2">背景色の変更</h2>
 <p>クロマキー合成等のために背景色を変更するには、画面左の「Environment settings」メニューから「Background color」を変更してください。</p>
-<h2 id="vmc">VMCプロトコルの出力</h2>
-<p>画面左の「Export settings」メニューから「Send VMC protocol」を有効化してください。</p>
+<h2 id="vmc">VMCプロトコル出力</h2>
+<p>画面左の「Export settings」メニューから「Send VMC protocol」を有効化してください。  </p>
+<div class="admonition info">
+<p class="admonition-title">VMCプロトコルの簡単な説明</p>
+<p>VMCプロトコルは、キャラクターのボーンや表情モーフ等の情報をアプリケーション間でリアルタイムに送受信するためのメッセージのフォーマットです。<br />
+プロトコルの詳細は、<a href="https://protocol.vmc.info/">https://protocol.vmc.info/</a> をご覧ください。</p>
+<p>なお、VMCプロトコルでのデータ送受信には、<a href="https://vmc.info/">Virtual Motion Capture</a> のアプリケーション自体は必要ではないことに注意してください。</p>
+</div>
+<h2 id="ndi">NDI®による動画ストリーム出力</h2>
+<p>画面左の「Export settings」メニューから「Send NDI」を有効化してください。<br />
+「MocapForStreamer」という名前で送信が開始されます。</p>
+<div class="admonition info">
+<p class="admonition-title">NDI® is a registered trademark of NewTek, Inc.</p>
+<p>See <a href="http://ndi.tv/">http://ndi.tv/</a> for the details.<br />
+You can download "NDI Tools" software suites for various platforms directly from this site. <a href="http://ndi.tv/tools/">http://ndi.tv/tools/</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">OBS-NDIプラグイン</p>
+<p>NDIで送信された画面を<a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/">OBSで受信するためのプラグイン</a>が公開されています。</p>
+</div>
+<h3 id="ndi_1">NDI出力でできること</h3>
+<p>NDIを使うと、MocapForStreamerの画面をリアルタイムにローカルネットワーク内の他のデバイスに送信することができます。<br />
+例えば、MocapForStreamerによるモーションキャプチャを行うPCと、その画面を他の素材等と合成して動画配信を行うPCを分けるといった利用が可能です。</p>
+<div class="admonition failure">
+<p class="admonition-title">他のデバイスにうまく送信できない場合</p>
+<p>ファイアウォールにより通信が阻害されている可能性があります。<br />
+ファイアウォールを無効化するか、NDIが使用するポートでの通信を許可してみてください。<br />
+NDIが使用するポートは、<a href="https://support.newtek.com/hc/en-us/articles/218109497-NDI-Video-Data-Flow">こちら</a>に記載の通り<strong>49152</strong>から<strong>65535</strong>です。</p>
+</div>
+<h3 id="_3">背景を透過した画像の出力</h3>
+<p>MocapForStreamerからNDIで送信される画面は、透明度(アルファチャンネル)を含んでいます。<br />
+画面左の「Environment settings」メニューから「Background color」の「A」をゼロにすることで、背景を透過した画面を出力することができます。</p>
                 
               
               
@@ -650,13 +749,13 @@
       
       
         
-        <a href="../advanced-filter-settings/" class="md-footer__link md-footer__link--next" aria-label="次: スムージングフィルタの設定" rel="next">
+        <a href="../advanced-environment/" class="md-footer__link md-footer__link--next" aria-label="次: 背景の設定" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              スムージングフィルタの設定
+              背景の設定
             </div>
           </div>
           <div class="md-footer__button md-icon">
