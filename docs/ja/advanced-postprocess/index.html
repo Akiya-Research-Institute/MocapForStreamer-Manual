@@ -546,42 +546,43 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    焦点距離と視野角
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     露光
   </a>
   
-    <nav class="md-nav" aria-label="露光">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     ブルーム
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     レンズフレア
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     グラデーションフィルタ
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     色修正
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -687,17 +688,38 @@
                 
                 
                 <h1 id="_1">ポストプロセス効果の設定</h1>
-<p>（工事中）</p>
 <h2 id="_2">ボケ</h2>
-<p>https://docs.unrealengine.com/4.27/ja/RenderingAndGraphics/PostProcessEffects/</p>
-<h2 id="_3">露光</h2>
-<p>https://docs.unrealengine.com/4.27/ja/RenderingAndGraphics/PostProcessEffects/AutomaticExposure/</p>
-<h3 id="_4">ブルーム</h3>
-<p>https://docs.unrealengine.com/4.27/ja/RenderingAndGraphics/PostProcessEffects/Bloom/</p>
-<h3 id="_5">レンズフレア</h3>
-<p>https://docs.unrealengine.com/4.27/ja/RenderingAndGraphics/PostProcessEffects/LensFlare/</p>
-<h3 id="_6">グラデーションフィルタ</h3>
-<h3 id="_7">色修正</h3>
+<p>「開口サイズ（F値）」が大きいほど、ピントが合う範囲が広くなります。<br />
+デフォルトでは自動的にキャラクターの顔面にピントが合うように設定されていますが、「撮影距離」の「Auto」のチェックを外して手動でピントを調整することもできます。</p>
+<p><img alt="" loading="lazy" src="../images/aperture.PNG" /></p>
+<h2 id="_3">焦点距離と視野角</h2>
+<p>「焦点距離」は視野角に影響します。<br />
+なお、センサーサイズが 23.76mm × 13.365mm であるものとして視野角が決定されます。</p>
+<p><img alt="" loading="lazy" src="../images/zoom.PNG" /></p>
+<h2 id="_4">露光</h2>
+<p>全体の明るさを調整できます。<br />
+「Auto」をチェックすることで、画面の明るさを一定に保つような明暗順応をシミュレートすることもできます。</p>
+<p><img alt="" loading="lazy" src="../images/exposure.PNG" /></p>
+<h2 id="_5">ブルーム</h2>
+<p>現実においては、目の網膜やカメラフィルムでのサブサーフェース スキャッタリングにより、明るい部分の周囲に光がにじむような現象が発生します。<br />
+これをシミュレートするものとして、画面上で「閾値」以上に明るい部分に対してある種のぼかしを適用するのがブルーム処理です。<br />
+必ずしも物理的に正しい描画とはなりませんが、明るい部分が発光しているかのような効果をもたらします。  </p>
+<p><img alt="" loading="lazy" src="../images/bloom.PNG" /></p>
+<h2 id="_6">レンズフレア</h2>
+<p>現実においては、カメラは通常複数のレンズを組み合わせて使用しており、それぞれのレンズで光の散乱が発生します。<br />
+散乱光の映り込みをシミュレートするものとして、画面上で「閾値」以上に明るい部分に基づいてある種の画像処理を適用するのがレンズフレアです。  </p>
+<p><img alt="" loading="lazy" src="../images/lensflare.PNG" /></p>
+<h2 id="_7">グラデーションフィルタ</h2>
+<p>画像に対して、グラデーションを重ねます。<br />
+4つの色と、それぞれの画像中での中心座標を指定します。<br />
+画像が明るくなりすぎてしまう場合は、ND（減光）を増やしてバランスをとってください。</p>
+<!-- ![](images/gradient.png){ loading=lazy } -->
+<p><img src="../images/gradient.png" width="512"></p>
+<h2 id="_8">色修正</h2>
+<p>コントラストや彩度などを指定し、画像を修正します。<br />
+下記の画像では、グラデーションフィルタで明るくなりすぎた画像に対して、コントラストと彩度を上げ、さらにLiftに負の値を指定して画像を全体的に黒に寄せてみました。</p>
+<!-- ![](images/color_correct.png){ loading=lazy } -->
+<p><img src="../images/color_correct.png" width="512"></p>
                 
               
               
