@@ -473,6 +473,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#video-stream-output-by-ndi" class="md-nav__link">
+    Video stream output by NDI®
+  </a>
+  
+    <nav class="md-nav" aria-label="Video stream output by NDI®">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do-with-ndi-export" class="md-nav__link">
+    What you can do with NDI export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-with-transparent-background" class="md-nav__link">
+    Export with transparent background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -517,6 +544,48 @@
           Advanced usage
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-environment/" class="md-nav__link">
+        Environment settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-lighting/" class="md-nav__link">
+        Lighting settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-postprocess/" class="md-nav__link">
+        Post process effect settings
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -612,9 +681,39 @@
                 
                 <h1 id="export-settings">Export settings</h1>
 <h2 id="background-color">Background color</h2>
-<p>To change the background color for chroma key compositing etc., change the 'Background color' from the 'Environment settings' menu on the left of the screen.</p>
+<p>To change the background color for chroma key compositing etc., change the <code>Background color</code> from the <code>Environment settings</code> menu on the left of the screen.</p>
 <h2 id="export-vmc-protocol">Export VMC protocol</h2>
-<p>Activate the 'Send VMC protocol' in the 'Export settings' menu on the left-hand side of the screen.</p>
+<p>Enable <code>Send VMC protocol</code> in the <code>Export settings</code> menu on the left side of the screen.</p>
+<div class="admonition info">
+<p class="admonition-title">VMC protocol</p>
+<p>The VMC protocol is a message format for sending and receiving character bones and facial expression morphs between applications in real time.<br />
+For details, see <a href="https://protocol.vmc.info/">https://protocol.vmc.info/</a>.</p>
+<p>Note that the <a href="https://vmc.info/">Virtual Motion Capture</a> application itself is not required to send and receive data using the VMC protocol.</p>
+</div>
+<h2 id="video-stream-output-by-ndi">Video stream output by NDI®</h2>
+<p>Enable <code>Send NDI</code> in the <code>Export settings</code> menu on the left side of the screen.<br />
+NDI video streaming will start with the name <code>MocapForStreamer</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">NDI® is a registered trademark of NewTek, Inc.</p>
+<p>See <a href="http://ndi.tv/">http://ndi.tv/</a> for the details.<br />
+You can download "NDI Tools" software suites for various platforms directly from this site. <a href="http://ndi.tv/tools/">http://ndi.tv/tools/</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">OBS-NDI plugin</p>
+<p><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/">Plugins for receiving video stream sent by NDI</a> is avalilable.</p>
+</div>
+<h3 id="what-you-can-do-with-ndi-export">What you can do with NDI export</h3>
+<p>NDI allows you to send MocapForStreamer's screen to other devices in your local network in real time.<br />
+For example, it is possible to separate the PC that performs motion capture with MocapForStreamer and the PC that composites the screen with other materials and streams video to the internet.</p>
+<div class="admonition failure">
+<p class="admonition-title">When NDI export fails</p>
+<p>Communication may be blocked by the firewall.<br />
+Try disabling the firewall or allow communication on the ports used by NDI.<br />
+The ports used by NDI are <strong>49152</strong> - <strong>65535</strong> as listed <a href="https://support.newtek.com/hc/en-us/articles/218109497-NDI-Video-Data-Flow">here</a>.</p>
+</div>
+<h3 id="export-with-transparent-background">Export with transparent background</h3>
+<p>The screen sent by MocapForStreamer via NDI contains translucency (Alpha channel).<br />
+You can output the screen with a transparent background by setting zero for <code>A</code> in <code>Background color</code> in the <code>Environment settings</code> menu on the left side of the screen.</p>
                 
               
               
@@ -650,13 +749,13 @@
       
       
         
-        <a href="../advanced-filter-settings/" class="md-footer__link md-footer__link--next" aria-label="Next: Smoothing filter settings" rel="next">
+        <a href="../advanced-environment/" class="md-footer__link md-footer__link--next" aria-label="Next: Environment settings" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Smoothing filter settings
+              Environment settings
             </div>
           </div>
           <div class="md-footer__button md-icon">

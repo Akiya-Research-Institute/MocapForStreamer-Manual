@@ -97,6 +97,9 @@ nav:
     - how-to-use-mouse-keyboard.md
     - how-to-use-export.md
   - Advanced usage:
+    - advanced-environment.md
+    - advanced-lighting.md
+    - advanced-postprocess.md
     - advanced-filter-settings.md
     - advanced-rig-settings.md
   - faq.md
