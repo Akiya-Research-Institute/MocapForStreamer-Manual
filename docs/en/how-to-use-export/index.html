@@ -467,30 +467,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#export-motion-data" class="md-nav__link">
+    Export motion data
+  </a>
+  
+    <nav class="md-nav" aria-label="Export motion data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-to-bvh-files" class="md-nav__link">
+    Save to BVH files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#export-vmc-protocol" class="md-nav__link">
     Export VMC protocol
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#video-stream-output-by-ndi" class="md-nav__link">
-    Video stream output by NDI®
+  <a href="#video-stream-output" class="md-nav__link">
+    Video stream output
   </a>
   
-    <nav class="md-nav" aria-label="Video stream output by NDI®">
+    <nav class="md-nav" aria-label="Video stream output">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-you-can-do-with-ndi-export" class="md-nav__link">
-    What you can do with NDI export
+  <a href="#spout-output" class="md-nav__link">
+    Spout output
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#export-with-transparent-background" class="md-nav__link">
-    Export with transparent background
+  <a href="#ndi-output" class="md-nav__link">
+    NDI® output
   </a>
   
 </li>
@@ -682,7 +702,12 @@
                 <h1 id="export-settings">Export settings</h1>
 <h2 id="background-color">Background color</h2>
 <p>To change the background color for chroma key compositing etc., change the <code>Background color</code> from the <code>Environment settings</code> menu on the left of the screen.</p>
-<h2 id="export-vmc-protocol">Export VMC protocol</h2>
+<h2 id="export-motion-data">Export motion data</h2>
+<p>You can save to a BVH or send to other applications in real time using the VMC protocol.</p>
+<h3 id="save-to-bvh-files">Save to BVH files</h3>
+<p>Click <code>Start BVH recording</code> from the <code>Export settings</code> menu on the left side of the screen, and select the save destination.<br />
+Press the same button again or press the stop button displayed in the upper right corner of the screen to output the BVH file.</p>
+<h3 id="export-vmc-protocol">Export VMC protocol</h3>
 <p>Enable <code>Send VMC protocol</code> in the <code>Export settings</code> menu on the left side of the screen.</p>
 <div class="admonition info">
 <p class="admonition-title">VMC protocol</p>
@@ -690,9 +715,59 @@
 For details, see <a href="https://protocol.vmc.info/">https://protocol.vmc.info/</a>.</p>
 <p>Note that the <a href="https://vmc.info/">Virtual Motion Capture</a> application itself is not required to send and receive data using the VMC protocol.</p>
 </div>
-<h2 id="video-stream-output-by-ndi">Video stream output by NDI®</h2>
-<p>Enable <code>Send NDI</code> in the <code>Export settings</code> menu on the left side of the screen.<br />
+<h2 id="video-stream-output">Video stream output</h2>
+<p>Spout or NDI® allows you to send MocapForStreamer screens to other applications in real time.</p>
+<p>The screen sent contains transparency (Alpha channel).<br />
+You can output the screen with a transparent background by setting zero for <code>A</code> in <code>Background color</code> in the <code>Environment settings</code> menu on the left side of the screen.</p>
+<p>Below is a brief comparison of the two.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Spout</th>
+<th>NDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Send to other app</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Send to other PC</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Frame rate</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Few frames</td>
+<td>Depends on the network</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spout-output">Spout output</h3>
+<p>Enable <code>Send Spout video stream</code> in the <code>Export settings</code> menu on the left side of the screen.<br />
+Spout video streaming will start with the name <code>MocapForStreamer</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Spout</p>
+<p>Spout uses GPU shared memory to share video between applications.<br />
+See <a href="https://spout.zeal.co/">https://spout.zeal.co/</a> for the details.  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">OBS-NDI plugin</p>
+<p><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/">Plugins for receiving video stream sent by NDI</a> is avalilable.</p>
+</div>
+<h3 id="ndi-output">NDI® output</h3>
+<p>Enable <code>Send NDI video stream</code> in the <code>Export settings</code> menu on the left side of the screen.<br />
 NDI video streaming will start with the name <code>MocapForStreamer</code>.</p>
+<p>NDI allows you to send MocapForStreamer's screen to other devices in your local network in real time.<br />
+For example, it is possible to separate the PC that performs motion capture with MocapForStreamer and the PC that composites the screen with other materials and streams video to the internet.</p>
 <div class="admonition info">
 <p class="admonition-title">NDI® is a registered trademark of NewTek, Inc.</p>
 <p>See <a href="http://ndi.tv/">http://ndi.tv/</a> for the details.<br />
@@ -702,18 +777,12 @@ You can download "NDI Tools" software suites for various platforms directly from
 <p class="admonition-title">OBS-NDI plugin</p>
 <p><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/">Plugins for receiving video stream sent by NDI</a> is avalilable.</p>
 </div>
-<h3 id="what-you-can-do-with-ndi-export">What you can do with NDI export</h3>
-<p>NDI allows you to send MocapForStreamer's screen to other devices in your local network in real time.<br />
-For example, it is possible to separate the PC that performs motion capture with MocapForStreamer and the PC that composites the screen with other materials and streams video to the internet.</p>
 <div class="admonition failure">
-<p class="admonition-title">When NDI export fails</p>
+<p class="admonition-title">When NDI output fails</p>
 <p>Communication may be blocked by the firewall.<br />
 Try disabling the firewall or allow communication on the ports used by NDI.<br />
 The ports used by NDI are <strong>49152</strong> - <strong>65535</strong> as listed <a href="https://support.newtek.com/hc/en-us/articles/218109497-NDI-Video-Data-Flow">here</a>.</p>
 </div>
-<h3 id="export-with-transparent-background">Export with transparent background</h3>
-<p>The screen sent by MocapForStreamer via NDI contains translucency (Alpha channel).<br />
-You can output the screen with a transparent background by setting zero for <code>A</code> in <code>Background color</code> in the <code>Environment settings</code> menu on the left side of the screen.</p>
                 
               
               

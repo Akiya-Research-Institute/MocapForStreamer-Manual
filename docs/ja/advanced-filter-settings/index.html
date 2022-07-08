@@ -526,9 +526,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          スムージングフィルタの設定
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         スムージングフィルタの設定
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    処理の概説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    フィルタパラメータの調整方法
+  </a>
+  
+    <nav class="md-nav" aria-label="フィルタパラメータの調整方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    AIによる推定の信頼度の影響度合い
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    通常の1€フィルタのパラメータ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -614,7 +673,45 @@
                 
                 
                 <h1 id="_1">スムージングフィルタの設定</h1>
-<p>（工事中）</p>
+<h2 id="_2">処理の概説</h2>
+<p>体の動きに対しては、下記の順番で情報を処理します。</p>
+<ol>
+<li>ユーザーの各関節のカメラ画像中での2次元位置をAIで推定</li>
+<li>ユーザーの各関節のカメラ画像中での2次元位置に対して<strong>スムージングフィルタを適用</strong>（トラッキング位置欄）</li>
+<li>ユーザーの各関節の3次元位置を視差に基づいて推定</li>
+<li>ユーザーの各関節の3次元位置を基にキャラクターの各関節の向きを推定</li>
+<li>キャラクターの各関節の向きに対して<strong>1€フィルタフィルタを適用</strong>（ボーンの回転欄）</li>
+<li>キャラクターの表情の変化とルート位置の変かに対して<strong>1€フィルタフィルタを適用</strong>（その他欄）</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">1€フィルタとは</p>
+<p><a href="http://cristal.univ-lille.fr/~casiez/1euro/">1€フィルタ</a>は、速度に比例してカットオフ周波数が増加するローパスフィルタです。<br />
+低速度時は通常のローパスフィルタのようにジッターノイズを抑制し、高速度時はカットオフ周波数が増加することで素早い動きに追随することができます。</p>
+</div>
+<p>上記「2」におけるスムージングフィルタは、1€フィルタをベースとしつつ、AIによる推定の信頼度を織り込んだものです。  </p>
+<h2 id="_3">フィルタパラメータの調整方法</h2>
+<p>フィルタで調整可能なパラメータは、下記のとおりです。</p>
+<ul>
+<li>AIによる推定の信頼度の影響度合い</li>
+<li>通常の1€フィルタのパラメータ<ul>
+<li>最小カットオフ周波数 <code>f0</code></li>
+<li>カットオフ周波数の増加率 <code>β</code></li>
+<li>速度のカットオフ周波数 <code>fv</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="ai">AIによる推定の信頼度の影響度合い</h3>
+<p>この値を大きくすると、関節が他の部位に隠されたときや関節が画面外に出てしまったときのノイズを抑制することができます。</p>
+<ul>
+<li>頭、肩、肘： 手によって隠されたときに、頭・肩・肘の位置のノイズが十分小さくなるよう値を大きくします。</li>
+<li>手： 手が画面外に出たときに、手の位置のノイズが十分小さくなるよう値を大きくします。</li>
+<li>腰： 腰は通常画面外にあるため、3程度の大きな値を設定します。</li>
+</ul>
+<h3 id="1">通常の1€フィルタのパラメータ</h3>
+<ul>
+<li>最小カットオフ周波数 <code>f0</code>: 静止した状態でノイズが気にならなくなるまで、この値を小さくします。</li>
+<li>カットオフ周波数の増加率 <code>β</code>: 体を動かしたときに動きへの遅延が気にならなくなるまで、この値を大きくします。</li>
+</ul>
                 
               
               

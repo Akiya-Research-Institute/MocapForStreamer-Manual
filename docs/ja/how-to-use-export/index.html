@@ -467,30 +467,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    モーションデータ出力
+  </a>
+  
+    <nav class="md-nav" aria-label="モーションデータ出力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bvh" class="md-nav__link">
+    BVHファイルへ保存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vmc" class="md-nav__link">
     VMCプロトコル出力
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#ndi" class="md-nav__link">
-    NDI®による動画ストリーム出力
+  <a href="#_4" class="md-nav__link">
+    動画ストリーム出力
   </a>
   
-    <nav class="md-nav" aria-label="NDI®による動画ストリーム出力">
+    <nav class="md-nav" aria-label="動画ストリーム出力">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ndi_1" class="md-nav__link">
-    NDI出力でできること
+  <a href="#spout" class="md-nav__link">
+    Spout出力
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    背景を透過した画像の出力
+  <a href="#ndi" class="md-nav__link">
+    NDI出力
   </a>
   
 </li>
@@ -682,7 +702,12 @@
                 <h1 id="_1">出力設定</h1>
 <h2 id="_2">背景色の変更</h2>
 <p>クロマキー合成等のために背景色を変更するには、画面左の「Environment settings」メニューから「Background color」を変更してください。</p>
-<h2 id="vmc">VMCプロトコル出力</h2>
+<h2 id="_3">モーションデータ出力</h2>
+<p>BVH形式のファイルへ保存、または、VMCプロトコルでリアルタイムに他のアプリケーションにデータを送信できます。</p>
+<h3 id="bvh">BVHファイルへ保存</h3>
+<p>画面左の「Export settings」メニューから「Start BVH recording」をクリックし、保存先を選択してください。<br />
+再度同じボタンを押すか、画面右上に表示される停止ボタンを押すと、BVHファイルが出力されます。</p>
+<h3 id="vmc">VMCプロトコル出力</h3>
 <p>画面左の「Export settings」メニューから「Send VMC protocol」を有効化してください。  </p>
 <div class="admonition info">
 <p class="admonition-title">VMCプロトコルの簡単な説明</p>
@@ -690,9 +715,59 @@
 プロトコルの詳細は、<a href="https://protocol.vmc.info/">https://protocol.vmc.info/</a> をご覧ください。</p>
 <p>なお、VMCプロトコルでのデータ送受信には、<a href="https://vmc.info/">Virtual Motion Capture</a> のアプリケーション自体は必要ではないことに注意してください。</p>
 </div>
-<h2 id="ndi">NDI®による動画ストリーム出力</h2>
-<p>画面左の「Export settings」メニューから「Send NDI」を有効化してください。<br />
+<h2 id="_4">動画ストリーム出力</h2>
+<p>SpoutまたはNDI®により、MocapForStreamerの画面をリアルタイムに他のアプリケーションへ送信することができます。</p>
+<p>送信される画面は、透明度(アルファチャンネル)を含みます。<br />
+画面左の「Environment settings」メニューから「Background color」の「A」をゼロにすることで、背景を透過した画面を送信することができます。</p>
+<p>下記は両者の簡単な比較です。</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>Spout</th>
+<th>NDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アプリ間の送信</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PC間の送信</td>
+<td>✖</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>フレームレート</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>遅延</td>
+<td>数フレーム程度</td>
+<td>ネットワークに依存</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spout">Spout出力</h3>
+<p>画面左の「Export settings」メニューから「Send Spout video stream」を有効化してください。<br />
 「MocapForStreamer」という名前で送信が開始されます。</p>
+<div class="admonition info">
+<p class="admonition-title">Spoutとは</p>
+<p>GPUの共有メモリを介してアプリケーション間でリアルタイムに動画像を共有する仕組みです。<br />
+詳細および各種ツールは<a href="https://spout.zeal.co/">こちら</a>をご覧ください。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Spout2 Plugin for OBS Studio</p>
+<p><a href="https://github.com/Off-World-Live/obs-spout2-plugin">OBSでSpout2の画像を送受信するためのプラグイン</a>が公開されています。</p>
+</div>
+<h3 id="ndi">NDI出力</h3>
+<p>画面左の「Export settings」メニューから「Send NDI video stream」を有効化してください。<br />
+「MocapForStreamer」という名前で送信が開始されます。</p>
+<p>NDIを使うと、MocapForStreamerの画面をリアルタイムにローカルネットワーク内の他のデバイスに送信することができます。<br />
+例えば、MocapForStreamerによるモーションキャプチャを行うPCと、その画面を他の素材等と合成して動画配信を行うPCを分けるといった利用が可能です。</p>
 <div class="admonition info">
 <p class="admonition-title">NDI® is a registered trademark of NewTek, Inc.</p>
 <p>See <a href="http://ndi.tv/">http://ndi.tv/</a> for the details.<br />
@@ -702,18 +777,12 @@ You can download "NDI Tools" software suites for various platforms directly from
 <p class="admonition-title">OBS-NDIプラグイン</p>
 <p>NDIで送信された画面を<a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/">OBSで受信するためのプラグイン</a>が公開されています。</p>
 </div>
-<h3 id="ndi_1">NDI出力でできること</h3>
-<p>NDIを使うと、MocapForStreamerの画面をリアルタイムにローカルネットワーク内の他のデバイスに送信することができます。<br />
-例えば、MocapForStreamerによるモーションキャプチャを行うPCと、その画面を他の素材等と合成して動画配信を行うPCを分けるといった利用が可能です。</p>
 <div class="admonition failure">
 <p class="admonition-title">他のデバイスにうまく送信できない場合</p>
 <p>ファイアウォールにより通信が阻害されている可能性があります。<br />
 ファイアウォールを無効化するか、NDIが使用するポートでの通信を許可してみてください。<br />
 NDIが使用するポートは、<a href="https://support.newtek.com/hc/en-us/articles/218109497-NDI-Video-Data-Flow">こちら</a>に記載の通り<strong>49152</strong>から<strong>65535</strong>です。</p>
 </div>
-<h3 id="_3">背景を透過した画像の出力</h3>
-<p>MocapForStreamerからNDIで送信される画面は、透明度(アルファチャンネル)を含んでいます。<br />
-画面左の「Environment settings」メニューから「Background color」の「A」をゼロにすることで、背景を透過した画面を出力することができます。</p>
                 
               
               
