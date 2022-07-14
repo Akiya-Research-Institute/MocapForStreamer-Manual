@@ -12,5 +12,7 @@
 - WASD: Move forward/backword & move left/right
 - QE: Move up/down
 - R: Reset the view
+- Space: Pause
+- F11: Fullscreen mode
 
 ![](images/keyboard.png){ loading=lazy }

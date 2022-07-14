@@ -12,5 +12,7 @@
 - WASD: 前後左右の移動
 - QE: 上下の移動
 - R: 視点のリセット
+- Space: 一時停止
+- F11: フルスクリーン化
 
 ![](images/keyboard.png){ loading=lazy }
