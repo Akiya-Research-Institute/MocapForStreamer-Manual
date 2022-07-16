@@ -482,6 +482,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fbx" class="md-nav__link">
+    FBXファイルへ保存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vmc" class="md-nav__link">
     VMCプロトコル出力
   </a>
@@ -703,10 +710,15 @@
 <h2 id="_2">背景色の変更</h2>
 <p>クロマキー合成等のために背景色を変更するには、画面左の「Environment settings」メニューから「Background color」を変更してください。</p>
 <h2 id="_3">モーションデータ出力</h2>
-<p>BVH形式のファイルへ保存、または、VMCプロトコルでリアルタイムに他のアプリケーションにデータを送信できます。</p>
+<p>BVH形式のファイルへ保存、FBX形式のファイルへ保存、または、VMCプロトコルでリアルタイムに他のアプリケーションにデータを送信できます。</p>
 <h3 id="bvh">BVHファイルへ保存</h3>
 <p>画面左の「Export settings」メニューから「Start BVH recording」をクリックし、保存先を選択してください。<br />
 再度同じボタンを押すか、画面右上に表示される停止ボタンを押すと、BVHファイルが出力されます。</p>
+<h3 id="fbx">FBXファイルへ保存</h3>
+<p>画面左の「Export settings」メニューから「Start FBX recording」をクリックし、保存先を選択してください。<br />
+再度同じボタンを押すか、画面右上に表示される停止ボタンを押すと、FBXファイルが出力されます。</p>
+<p>アニメーションは、固定フレームレートでリサンプリングした上で出力されます。<br />
+リサンプリングするフレームレートを、120～24fpの中から指定することができます。</p>
 <h3 id="vmc">VMCプロトコル出力</h3>
 <p>画面左の「Export settings」メニューから「Send VMC protocol」を有効化してください。  </p>
 <div class="admonition info">
@@ -760,7 +772,7 @@
 詳細および各種ツールは<a href="https://spout.zeal.co/">こちら</a>をご覧ください。</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Spout2 Plugin for OBS Studio</p>
+<p class="admonition-title">OBSのSpout2プラグイン</p>
 <p><a href="https://github.com/Off-World-Live/obs-spout2-plugin">OBSでSpout2の画像を送受信するためのプラグイン</a>が公開されています。</p>
 </div>
 <h3 id="ndi">NDI出力</h3>

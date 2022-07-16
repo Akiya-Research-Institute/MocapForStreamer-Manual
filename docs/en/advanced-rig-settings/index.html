@@ -540,9 +540,69 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Rig settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Rig settings
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upper-body-twist" class="md-nav__link">
+    Upper body twist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pelvis-position" class="md-nav__link">
+    Pelvis position
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face-to-head-offset" class="md-nav__link">
+    Face to head offset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hand-tracking" class="md-nav__link">
+    Hand tracking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustment-of-finger-rotation" class="md-nav__link">
+    Adjustment of finger rotation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -614,7 +674,35 @@
                 
                 
                 <h1 id="rig-settings">Rig settings</h1>
-<p>(WIP)</p>
+<p>Use the "Rig Settings" menu on the left side of the screen to set how the movement will be applied to the character.  </p>
+<h2 id="upper-body-twist">Upper body twist</h2>
+<p>Turn off "Enable Upper Body Twist" to make the upper body always faces forward.</p>
+<h2 id="pelvis-position">Pelvis position</h2>
+<p>Turn on "Lock pelvis position at" to fix the position of the hip to the specified position.<br />
+Adjust the above position according to the relative positions between the real body and the camera.</p>
+<div class="admonition warning">
+<p class="admonition-title">Turn off "Enable Upper Body Twist" when shoulder positions are incorrect</p>
+<p>When "Enable Upper Body Twist" and "Lock pelvis position" are both turned on, the shoulder bones' orientations tend to be in unintended directions.  <br />
+In that case, try one of the followings:</p>
+<ul>
+<li>Adjust "Coordinate tweak &gt; Offset for each joint &gt; Shoulders"</li>
+<li>Turn off "Enable Upper Body Twist"</li>
+</ul>
+</div>
+<h2 id="face-to-head-offset">Face to head offset</h2>
+<p>The AI estimates the position of the face based on the positions of the eyes, nose, and mouth of the person in the webcam image.<br />
+Specify the offset from the estimated face position to the position of the character's Head bone at "Face to head offset".</p>
+<h2 id="hand-tracking">Hand tracking</h2>
+<p>Select whether to perform hand tracking with the stereo camera or a single camera with "Use stereo cameras for hand tracking".  </p>
+<ul>
+<li>Turned on (Use stereo camera): Accurate tracking, but vulnerable to waving motion</li>
+<li>Turned off (Use single camera)： Stable and robust tracking. Use less CPU/GPU.</li>
+</ul>
+<h2 id="adjustment-of-finger-rotation">Adjustment of finger rotation</h2>
+<p>You can adjust the direction of finger rotation by "Secondary axis for finger rotation".<br />
+This specifies the axis of rotaion for each finger.<br />
+For example, by default, the index finger is set to rotate around the Y axis.  </p>
+<p><img alt="" loading="lazy" src="../images/fingerAxis.png" /></p>
                 
               
               

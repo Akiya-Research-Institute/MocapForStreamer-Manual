@@ -1,9 +1,12 @@
 # Changelog
 
+## v1.1 (2022-07-16)
+- Added a function to [save motion data to FBX files](../how-to-use-export/#save-to-fbx-files)
+
 ## v1.0 (2022-07-08)
 - New features
-    - Added a function to [save motion data to BVH files](../how-to-use-export/#bvh)
-    - Added a function to [export video stream by Spout](../how-to-use-export/#spout)
+    - Added a function to [save motion data to BVH files](../how-to-use-export/#save-to-bvh-files)
+    - Added a function to [export video stream by Spout](../how-to-use-export/#spout-output)
     - Added a button to reset settings.
     - Added a function to pause (Space-key).
 - Changes

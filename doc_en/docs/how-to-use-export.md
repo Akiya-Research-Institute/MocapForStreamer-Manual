@@ -13,6 +13,14 @@ You can save to a BVH or send to other applications in real time using the VMC p
 Click `Start BVH recording` from the `Export settings` menu on the left side of the screen, and select the save destination.  
 Press the same button again or press the stop button displayed in the upper right corner of the screen to output the BVH file.
 
+### Save to FBX files
+
+Click `Start FBX recording` from the `Export settings` menu on the left side of the screen, and select the save destination.  
+Press the same button again or press the stop button displayed in the upper right corner of the screen to output the FBX file.
+
+The animation is exported after resampling at a fixed frame rate.  
+You can specify the resampling frame rate from 120 to 24 fps.
+
 ### Export VMC protocol
 
 Enable `Send VMC protocol` in the `Export settings` menu on the left side of the screen.
@@ -48,8 +56,8 @@ Spout video streaming will start with the name `MocapForStreamer`.
     Spout uses GPU shared memory to share video between applications.  
     See [https://spout.zeal.co/](https://spout.zeal.co/) for the details.  
 
-!!! Info "OBS-NDI plugin"
-    [Plugins for receiving video stream sent by NDI](https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/) is avalilable.
+!!! Info "Spout2 Plugin for OBS Studio"
+    [Plugins for receiving video stream sent by Spout](https://github.com/Off-World-Live/obs-spout2-plugin) is avalilable.
 
 ### NDI® output
 

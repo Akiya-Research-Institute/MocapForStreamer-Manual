@@ -540,9 +540,69 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          動きの設定
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         動きの設定
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    上半身のひねり
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    腰の位置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    顔のトラッキング位置からHeadボーンへのオフセット
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ハンドトラッキングの実行方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    指の回転の向きの調整
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -614,7 +674,36 @@
                 
                 
                 <h1 id="_1">動きの設定</h1>
-<p>（工事中）</p>
+<p>画面左の「リグ設定」メニューから、動きをどのようにキャラクターに適用するかを設定します。  </p>
+<h2 id="_2">上半身のひねり</h2>
+<p>「上半身のひねりを有効化」をオフにすると、上半身が常に正面を向いた状態になります。</p>
+<h2 id="_3">腰の位置</h2>
+<p>「腰の位置を固定」をオンにすると、腰の位置が指定した座標に固定されます。<br />
+現実の体とカメラとの位置関係に合わせて、上記の座標は調整してください。</p>
+<div class="admonition warning">
+<p class="admonition-title">肩が変になるときは、「上半身のひねりを有効化」をオフが推奨</p>
+<p>「上半身のひねりを有効化」と「腰の位置を固定」が両方ともオンのときは、肩のボーンが意図しない方向に向きがちです。<br />
+その場合は、下記のいずれかをお試しください。</p>
+<ul>
+<li>「座標の調整 &gt; 各関節の位置のオフセット &gt; 肩」を調整する</li>
+<li>「上半身のひねりを有効化」をオフにする</li>
+</ul>
+</div>
+<h2 id="head">顔のトラッキング位置からHeadボーンへのオフセット</h2>
+<p>AIは、画像中の人の目・鼻・口の位置から、顔の位置を推定します。<br />
+推定された顔の位置と、キャラクターのHeadボーンの位置との差を、「顔から頭へのオフセット」で指定します。<br />
+現実の首を上下左右に向けながら、キャラクターの首の動きに違和感がなくなるよう調整します。</p>
+<h2 id="_4">ハンドトラッキングの実行方法</h2>
+<p>ハンドトラッキングをステレオカメラで実行するか、単カメラで実行するかを、「ハンドトラッキングをステレオカメラで実行」で選択します。  </p>
+<ul>
+<li>オン（ステレオカメラで実行）： より繊細な表現が可能ですが、手を振るなどの素早い動作に弱いです。</li>
+<li>オフ（単カメラで実行）： 処理負荷が軽く、また、より頑強なトラッキングが可能です。</li>
+</ul>
+<h2 id="_5">指の回転の向きの調整</h2>
+<p>指の回転の向きが正しくない場合は、「指の回転のSecondary axis」で多少の調整が可能です。<br />
+各指の関節が、どの向きを軸として回転するかを指定します。<br />
+例えばデフォルトでは、人差し指はY方向を軸として関節が回転するよう設定されています。  </p>
+<p><img alt="" loading="lazy" src="../images/fingerAxis.png" /></p>
                 
               
               
